@@ -15,7 +15,7 @@ Lead Instructor: Dakota Martinez
 
 Lead Teaching Assistant: Ahsan Abbasi
 
-Teaching Assistants: Nicky Liu, Jean Luis Urena (after hours), Jorge Vasquez, Chadwick Hinds
+Teaching Assistants: Nicky Liu, Jean Luis Urena (after hours), Jorge Vasquez, Chad Hinds
 
 Program Manager: Sabine Salandy
 
