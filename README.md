@@ -123,3 +123,49 @@ Daily Schedule (Subject To Change!)
 - [Hackerrank Pre-Assessment](https://www.hackerrank.com/test/eni9i5rsi03/2e1d4f950c4c3ae0cce9126578719d6f?try_test=true&email=ka.tom@cuny.edu)
 
 - [Blackboard/ Onboarding](https://bbhosted.cuny.edu/webapps/blackboard/content/listContent.jsp?content_id=_75836936_1&course_id=_2267876_1&mode=reset)
+
+**Day 2: Introduction to HTML/CSS, Bootstrap, Flexbox & Grid (06/13/23)**
+
+- [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
+
+**Day 3: Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
+
+- [Writing good commit messages](https://medium.com/compass-true-north/writing-good-commit-messages-fc33af9d6321)
+
+- [Advanced Git Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
+- [Git and GitHub Slides - Part I](https://docs.google.com/presentation/d/12tgnThkuKGHpbxZEv2RTWOTLpViL1O3hcHEGNJv9Wzo/edit?usp=sharing)
+
+- [Git and GitHub Slides - Part II](https://docs.google.com/presentation/d/1Qkz1Z83P2b2EUFDrMN8L1X7BcMwZzzkSqCKCI8INH78/edit?usp=sharing)
+
+**Day 4: Intro to JavaScript (06/15/23)**
+
+- [JS Data Types & Variables](https://frontend.turing.edu/lessons/module-1/js-data-types-and-variables.html)
+
+- [JS Dot & Bracket Notation](https://frontend.turing.edu/lessons/module-1/js-dot-bracket-notation.html)
+
+- [Intro to JS Functions](https://frontend.turing.edu/lessons/module-1/js-intro-to-functions.html)
+
+- [JS Array Prototype methods](https://frontend.turing.edu/lessons/module-1/js-array-prototype-methods.html)
+
+- [First-Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+- [ES6 Destructuring Assignment](https://frontend.turing.edu/lessons/module-3/es6-destructuring.html)
+
+- [JavaScript Style Guide](https://github.com/airbnb/javascript)
+
+Other resources:
+
+- [Eloquent Javascript Chapter 3: Functions](http://eloquentjavascript.net/03_functions.html)
+
+- [Eloquent Javascript Chapter 4: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+
+- [Eloquent Javascript Chapter 5: Higher Order Function](http://eloquentjavascript.net/05_higher_order.html)
+
+- [JavaScript! slide deck](https://drive.google.com/file/d/1JL2pjlW0np5sxY8uKLQdU_W8vd3PPXdM/view?usp=sharing)
+
+- [More JavaScript! slide deck](https://drive.google.com/file/d/1RAYPYLNmtDRqLy1bBFuDxpqsiOnYOpRg/view?usp=sharing)
+
+**Day 5: Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule (06/16/23)**
+
+No code for the day
