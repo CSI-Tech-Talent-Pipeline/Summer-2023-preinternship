@@ -1,0 +1,90 @@
+.text-red {
+  color: red;
+}
+
+.btn {
+  margin-bottom: 2em;
+  width: 7em;
+  height: 3em;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  border: 6px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 15px 10px;
+  place-content: center space-between;
+}
+.grid-item {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.item-1 {
+  background-color: #b4bf35;
+}
+.item-2 {
+  background-color: #b95f21;
+}
+.item-3 {
+  background-color: #1c4c56;
+}
+.item-4 {
+  background-color: #cfb276;
+}
+.item-5 {
+  background-color: #6b0803;
+}
+.item-6 {
+  background-color: #cfb276;
+}
+.item-7 {
+  background-color: #b95f21;
+}
+.item-8 {
+  background-color: #01243a;
+}
+.item-9 {
+  background-color: #aad041;
+}
+
+@media screen and (min-width: 30em) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 400px;
+    gap: 30px 20px;
+  }
+  .item-9 {
+    grid-column-start: 3;
+    grid-column-end: span 1;
+  }
+}
+
+.j-desc {
+  display: flex;
+  place-items: start;
+  gap: 1em;
+}
+
+.j-desc__job-title {
+  margin: 0;
+}
+
+.j-desc__company {
+  margin: 0;
+}
+
+.j-desc__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
