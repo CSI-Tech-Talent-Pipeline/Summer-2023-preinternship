@@ -3,12 +3,26 @@
 }
 
 .btn {
+<<<<<<< HEAD
   margin-bottom: 2em;
+=======
+  /* margin-bottom: 2em; */
+>>>>>>> upstream/main
   width: 7em;
   height: 3em;
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.btn-container {
+  height: 50vh;
+  display: flex;
+  place-content: center;
+  place-items: center; 
+}
+
+>>>>>>> upstream/main
 .text-center {
   text-align: center;
 }
@@ -16,11 +30,30 @@
 .container {
   border: 6px solid black;
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   gap: 15px 10px;
   place-content: center space-between;
 }
+=======
+  margin: 0 3em 2em;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 100px 150px 200px; */
+  /* height: 400px; */
+  /* 
+    justify for main axis positioning
+    align for cross axis positioning
+    place for assigning both at once (align first then justify)
+   */
+  /* justify-items: center; 
+  align-items: center; */
+  /* place-items: start center; */
+  place-content: center space-between; /* align-items: center; justify-content: space-between */
+  gap: 30px;
+}
+
+>>>>>>> upstream/main
 .grid-item {
   color: white;
   font-size: 1.5rem;
@@ -53,16 +86,29 @@
 }
 .item-9 {
   background-color: #aad041;
+<<<<<<< HEAD
+=======
+  grid-column-start: 1;
+  grid-column-end: span 2;
+>>>>>>> upstream/main
 }
 
 @media screen and (min-width: 30em) {
   .container {
+<<<<<<< HEAD
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     height: 400px;
     gap: 30px 20px;
   }
   .item-9 {
+=======
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item-9 {
+    background-color: #aad041;
+>>>>>>> upstream/main
     grid-column-start: 3;
     grid-column-end: span 1;
   }
@@ -74,6 +120,14 @@
   gap: 1em;
 }
 
+<<<<<<< HEAD
+=======
+.j-desc__details {
+  display: flex;
+  flex-direction: column;
+}
+
+>>>>>>> upstream/main
 .j-desc__job-title {
   margin: 0;
 }
@@ -82,9 +136,16 @@
   margin: 0;
 }
 
+<<<<<<< HEAD
 .j-desc__details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: auto;
 }
+=======
+.j-desc__metadata {
+  list-style: none;
+  padding: 0;
+}
+>>>>>>> upstream/main
