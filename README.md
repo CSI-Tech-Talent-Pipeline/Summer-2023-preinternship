@@ -164,9 +164,8 @@ Daily Schedule (Subject To Change!)
 
 
 
-**Day 3: Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
+**Day 3: [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
 
-- [Codealong](./day03-intro-to-git-and-github/README.md)
 - [Make a Good README](https://www.makeareadme.com/)
 - [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md)
 - [Writing good commit messages](https://medium.com/compass-true-north/writing-good-commit-messages-fc33af9d6321)
