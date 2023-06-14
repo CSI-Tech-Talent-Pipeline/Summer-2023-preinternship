@@ -42,8 +42,8 @@ Daily Schedule (Subject To Change!)
 | Day                           | Description                                                                  | Links |
 | ----------------------------- | ---------------------------------------------------------------------------- | ----- |
 | **Day 1** - Monday 6/12/23    | Hackerrank assessment & Growth Mindset Discussion                            |       |
-| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |       |
-| **Day 3** - Wednesday 6/14/23 | Intro to Git & GitHub                                                        |       |
+| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |  [index.html](./day02-intro-to-html/index.html), [styles.css](./day02-intro-to-html/styles.css)     |
+| **Day 3** - Wednesday 6/14/23 | [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md)                                                        |   [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md)    |
 | **Day 4** - Thursday 6/15/23  | Intro to JavaScript                                                          |       |
 | **Day 5** - Friday 6/16/23    | Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule |       |
 
