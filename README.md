@@ -42,9 +42,9 @@ Daily Schedule (Subject To Change!)
 | Day                           | Description                                                                  | Links |
 | ----------------------------- | ---------------------------------------------------------------------------- | ----- |
 | **Day 1** - Monday 6/12/23    | Hackerrank assessment & Growth Mindset Discussion                            |       |
-| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |       |
-| **Day 3** - Wednesday 6/14/23 | Intro to Git & GitHub                                                        |       |
-| **Day 4** - Thursday 6/15/23  | Intro to JavaScript                                                          |       |
+| **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |  [index.html](./day02-intro-to-html/index.html), [styles.css](./day02-intro-to-html/styles.css)     |
+| **Day 3** - Wednesday 6/14/23 | [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md)                                                        |   [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md), [Job App Tracker Repo](https://github.com/DakotaLMartinez/job-app-tracker)    |
+| **Day 4** - Thursday 6/15/23  | [Intro to JavaScript](./day04-intro-to-javascript/README.md)                                                          |       |
 | **Day 5** - Friday 6/16/23    | Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule |       |
 
 #### Week 2
@@ -163,3 +163,42 @@ Daily Schedule (Subject To Change!)
 - [Build a Tribute Page](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page)
 
 
+
+**Day 3: [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md), Git/Github/Collaborative Software Development (Pair Programming) (06/14/23)**
+
+- [Make a Good README](https://www.makeareadme.com/)
+- [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md)
+- [Writing good commit messages](https://medium.com/compass-true-north/writing-good-commit-messages-fc33af9d6321)
+- [Advanced Git Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- [Git and GitHub Slides - Part I](https://docs.google.com/presentation/d/12tgnThkuKGHpbxZEv2RTWOTLpViL1O3hcHEGNJv9Wzo/edit?usp=sharing)
+- [Git and GitHub Slides - Part II](https://docs.google.com/presentation/d/1Qkz1Z83P2b2EUFDrMN8L1X7BcMwZzzkSqCKCI8INH78/edit?usp=sharing)
+
+**Day 4: Intro to JavaScript (06/15/23)**
+
+#### Extra Resources ####
+
+- [JS Data Types & Variables](https://frontend.turing.edu/lessons/module-1/js-data-types-and-variables.html)
+
+- [JS Dot & Bracket Notation](https://frontend.turing.edu/lessons/module-1/js-dot-bracket-notation.html)
+
+- [Intro to JS Functions](https://frontend.turing.edu/lessons/module-1/js-intro-to-functions.html)
+
+- [JS Array Prototype methods](https://frontend.turing.edu/lessons/module-1/js-array-prototype-methods.html)
+
+- [First-Class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+- [ES6 Destructuring Assignment](https://frontend.turing.edu/lessons/module-3/es6-destructuring.html)
+
+- [JavaScript Style Guide](https://github.com/airbnb/javascript)
+
+Other resources:
+
+- [Eloquent Javascript Chapter 3: Functions](http://eloquentjavascript.net/03_functions.html)
+
+- [Eloquent Javascript Chapter 4: Objects and Arrays](http://eloquentjavascript.net/04_data.html)
+
+- [Eloquent Javascript Chapter 5: Higher Order Function](http://eloquentjavascript.net/05_higher_order.html)
+
+- [JavaScript! slide deck](https://drive.google.com/file/d/1JL2pjlW0np5sxY8uKLQdU_W8vd3PPXdM/view?usp=sharing)
+
+- [More JavaScript! slide deck](https://drive.google.com/file/d/1RAYPYLNmtDRqLy1bBFuDxpqsiOnYOpRg/view?usp=sharing)
