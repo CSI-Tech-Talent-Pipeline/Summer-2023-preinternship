@@ -3,12 +3,17 @@
 }
 
 .btn {
+<<<<<<< HEAD
   margin-bottom: 2em;
+=======
+  /* margin-bottom: 2em; */
+>>>>>>> upstream/main
   width: 7em;
   height: 3em;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .container {
   border: 6px solid black;
   display: grid;
@@ -17,6 +22,36 @@
 	height: 400px;
 	justify-content: space-between;
 	gap: 30px;
+=======
+.btn-container {
+  height: 50vh;
+  display: flex;
+  place-content: center;
+  place-items: center; 
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  border: 6px solid black;
+  display: grid;
+  margin: 0 3em 2em;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 100px 150px 200px; */
+  /* height: 400px; */
+  /* 
+    justify for main axis positioning
+    align for cross axis positioning
+    place for assigning both at once (align first then justify)
+   */
+  /* justify-items: center; 
+  align-items: center; */
+  /* place-items: start center; */
+  place-content: center space-between; /* align-items: center; justify-content: space-between */
+  gap: 30px;
+>>>>>>> upstream/main
 }
 
 .grid-item {
@@ -51,4 +86,46 @@
 }
 .item-9 {
   background-color: #aad041;
+<<<<<<< HEAD
 }
+=======
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+@media screen and (min-width: 30em) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item-9 {
+    background-color: #aad041;
+    grid-column-start: 3;
+    grid-column-end: span 1;
+  }
+}
+
+.j-desc {
+  display: flex;
+  place-items: start;
+  gap: 1em;
+}
+
+.j-desc__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.j-desc__job-title {
+  margin: 0;
+}
+
+.j-desc__company {
+  margin: 0;
+}
+
+.j-desc__metadata {
+  list-style: none;
+  padding: 0;
+}
+>>>>>>> upstream/main
