@@ -52,7 +52,7 @@ Daily Schedule (Subject To Change!)
 | Day                           | Description                                    | Links |
 | ----------------------------- | ---------------------------------------------- | ----- |
 | Monday 6/19/23                | Juneteenth                                     |       |
-| **Day 6** - Tuesday 6/20/23   | Using JavaScript for Algorithms & Unit Testing |       |
+| **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) |       |
 | **Day 7** - Wednesday 6/21/23 | Cover Letters & Email Communication            |       |
 | **Day 8** - Thursday 6/22/23  | DOM Manipulation                               |       |
 | **Day 9** - Friday 6/23/23    | Intro to React                                 |       |
@@ -202,3 +202,11 @@ Other resources:
 - [JavaScript! slide deck](https://drive.google.com/file/d/1JL2pjlW0np5sxY8uKLQdU_W8vd3PPXdM/view?usp=sharing)
 
 - [More JavaScript! slide deck](https://drive.google.com/file/d/1RAYPYLNmtDRqLy1bBFuDxpqsiOnYOpRg/view?usp=sharing)
+
+**Day 6: Using JavaScript for Algorithms & Unit Testing (06/20/23)**
+
+Resources:
+- [Introduction to Algorithms](https://www.geeksforgeeks.org/introduction-to-algorithms/)
+- [Introduction to Unit Testing](https://www.guru99.com/unit-testing-guide.html)
+- [Jest - Getting Started](https://jestjs.io/docs/getting-started)
+- [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
