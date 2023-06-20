@@ -3,26 +3,12 @@
 }
 
 .btn {
-<<<<<<< HEAD
-  margin-bottom: 2em;
-=======
   /* margin-bottom: 2em; */
->>>>>>> upstream/main
   width: 7em;
   height: 3em;
   text-align: center;
 }
 
-<<<<<<< HEAD
-.container {
-  border: 6px solid black;
-  display: grid;
-	margin: 0 3em 2em;
-	grid-template-columns: 1fr 2fr 3fr;
-	height: 400px;
-	justify-content: space-between;
-	gap: 30px;
-=======
 .btn-container {
   height: 50vh;
   display: flex;
@@ -51,7 +37,6 @@
   /* place-items: start center; */
   place-content: center space-between; /* align-items: center; justify-content: space-between */
   gap: 30px;
->>>>>>> upstream/main
 }
 
 .grid-item {
@@ -86,9 +71,6 @@
 }
 .item-9 {
   background-color: #aad041;
-<<<<<<< HEAD
-}
-=======
   grid-column-start: 1;
   grid-column-end: span 2;
 }
@@ -128,4 +110,3 @@
   list-style: none;
   padding: 0;
 }
->>>>>>> upstream/main
