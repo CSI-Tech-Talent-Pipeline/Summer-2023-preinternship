@@ -44,7 +44,7 @@ Daily Schedule (Subject To Change!)
 | **Day 1** - Monday 6/12/23    | Hackerrank assessment & Growth Mindset Discussion                            |       |
 | **Day 2** - Tuesday 6/13/23   | [Intro to HTML/CSS, Bootstrap, Flexbox & Grid](./day02-intro-to-html/README.md)                                 |  [index.html](./day02-intro-to-html/index.html), [styles.css](./day02-intro-to-html/styles.css)     |
 | **Day 3** - Wednesday 6/14/23 | [Intro to Git & GitHub](./day03-intro-to-git-and-github/README.md)                                                        |   [ChatGPT README Generator Prompt](./day03-intro-to-git-and-github/README_GENERATOR_PROMPT.md), [Job App Tracker Repo](https://github.com/DakotaLMartinez/job-app-tracker)    |
-| **Day 4** - Thursday 6/15/23  | [Intro to JavaScript](./day04-intro-to-javascript/README.md)                                                          |       |
+| **Day 4** - Thursday 6/15/23  | [Intro to JavaScript](./day04-intro-to-javascript/README.md)                                                          | [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...04_solution)      |
 | **Day 5** - Friday 6/16/23    | Intro to Technical Resume Building, 1-on-1 Coaching Preferences and Schedule |       |
 
 #### Week 2
@@ -52,7 +52,7 @@ Daily Schedule (Subject To Change!)
 | Day                           | Description                                    | Links |
 | ----------------------------- | ---------------------------------------------- | ----- |
 | Monday 6/19/23                | Juneteenth                                     |       |
-| **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) |       |
+| **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) | [Solution code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/06_solution?expand=1)     |
 | **Day 7** - Wednesday 6/21/23 | Cover Letters & Email Communication            |       |
 | **Day 8** - Thursday 6/22/23  | DOM Manipulation                               |       |
 | **Day 9** - Friday 6/23/23    | Intro to React                                 |       |
