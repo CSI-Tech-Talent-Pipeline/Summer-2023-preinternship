@@ -66,3 +66,41 @@ const jobs = [
     postDate: "6 days ago",
   },
 ];
+
+// const key = "title";
+// console.log(jobs[0]);
+// console.log(key[1]);
+
+// for (let i = 0; i < jobs.length; i++) {
+//   console.log(jobs[i].title);
+// }
+
+// const compliments = [];
+// compliments.push("You are very friendly");
+// console.log(compliments);
+
+// console.log(!!true);
+// console.log(!!false);
+// console.log(!false);
+// console.log(!true);
+// console.log(!!undefined); //false, non intentional falsy
+// console.log(!!null); //false, intentional falsy
+// console.log([] + 2);
+
+// const { company, title, salary } = jobs[0];
+// console.log(`${company} is hiring a ${title} and are offering
+// ${salary}`);
+
+function calculateAverageSalary(jobs) {
+  let totalSalary = 0;
+  for (let i = 0; i < jobs.length; i++) {
+    let salaryRange = jobs[i].salary.split(" - "); // Split the salary range into an array
+    let minSalary = parseInt(salaryRange[0].replace(/\D/g, "")); // Get the minimum salary as a number
+    let maxSalary = parseInt(salaryRange[1].replace(/\D/g, "")); // Get the maximum salary as a number
+    let averageSalary = (minSalary + maxSalary) / 2; // Calculate the average salary
+    totalSalary += averageSalary; // Add it to the total
+  }
+  return totalSalary / jobs.length; // Return the average salary across all jobs
+}
+
+console.log(`Average salary: ${calculateAverageSalary(jobs)}k`); //this is wrong due to differing pay periods
