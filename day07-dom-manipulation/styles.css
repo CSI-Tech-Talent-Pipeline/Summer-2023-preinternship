@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  max-width: 96rem;
+}
+
+.j-desc {
+  display: flex;
+  place-items: start;
+  place-content: start;
+  gap: 20px;
+}
+
+.j-desc__job-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.j-desc__company {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.j-desc__metadata {
+  list-style: none;
+  padding-left: 0;
+}
