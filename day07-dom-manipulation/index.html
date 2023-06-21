@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Application Tracker</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Job Application Tracker</h1>
+      <form id="jobForm">
+        <input type="text" id="jobTitle" placeholder="Job Title" />
+        <input type="text" id="companyName" placeholder="Company Name" />
+        <button type="submit">Add Job</button>
+      </form>
       <section id="jobs">
         <div class="j-desc">
           <img
@@ -37,9 +43,9 @@
             <h2 class="j-desc__job-title">Ruby on Rails Engineer</h2>
             <p class="j-desc__company">Aha!</p>
             <ul class="j-desc__metadata">
-              <li>Washington D.C. (Remote)</li>
-              <li>$100k/yr - $160k/yr</li>
-              <li>Promoted - 4 Applicants</li>
+              <li class="j-desc__location">Washington D.C. (Remote)</li>
+              <li class="j-desc__salary">$100k/yr - $160k/yr</li>
+              <li class="j-desc__posting_date">Promoted - 4 Applicants</li>
             </ul>
           </div>
         </div>
@@ -55,9 +61,9 @@
             </h2>
             <p class="j-desc__company">Jobot</p>
             <ul class="j-desc__metadata">
-              <li>Baltimore, MD (Remote)</li>
-              <li>$110k/yr - $140k/yr</li>
-              <li>6 hours ago</li>
+              <li class="j-desc__location">Baltimore, MD (Remote)</li>
+              <li class="j-desc__salary">$110k/yr - $140k/yr</li>
+              <li class="j-desc__posting_date">6 hours ago</li>
             </ul>
           </div>
         </div>
