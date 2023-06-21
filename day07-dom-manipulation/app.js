@@ -66,3 +66,30 @@ const jobs = [
     postDate: "6 days ago",
   },
 ];
+
+
+function createNewJob() {
+  // create a new job description
+  const jobDiv = document.createElement("div")
+  jobDiv.className = "j-desc"
+
+  // create details div
+  const jobDetails = document.createElement("div")
+  jobDetails.className = 'j-desc__details'
+
+  // create a job title/header
+  const jobTitle = document.createElement("div")
+  jobTitle.className = "job-desc__job-title"
+  jobTitle.textContent = "my new job"
+
+  // put header inside of details
+  jobDetails.append(jobTitle)
+  
+  // put job details div into jobdiv
+  jobDiv.append(jobDetails)
+
+  
+  
+}
+
+createNewJob()
