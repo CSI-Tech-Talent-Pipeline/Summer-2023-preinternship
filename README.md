@@ -53,8 +53,8 @@ Daily Schedule (Subject To Change!)
 | ----------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Monday 6/19/23                | Juneteenth                                                                                            |                                                                                                                     |
 | **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) | [Solution code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/06_solution?expand=1) |
-| **Day 7** - Wednesday 6/21/23 | [DOM Manipulation](./day07-dom-manipulation/README.md)                                                                                      |                                                                                                                     |
-| **Day 8** - Thursday 6/22/23  | Intro to React                                                                                        |                                                                                                                     |
+| **Day 7** - Wednesday 6/21/23 | [DOM Manipulation](./day07-dom-manipulation/README.md)                                                                                      |      [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/commit/3646ee6b7093d45bcba7d12cafa71c02bdc2d354)      |
+| **Day 8** - Thursday 6/22/23  | [Intro to React](./day08-intro-to-react/README.md)                                                                                        |                                                                                                                     |
 | **Day 9** - Friday 6/23/23    | Cover Letters & Email Communication                                                                   |                                                                                                                     |
 
 #### Week 3
@@ -211,3 +211,37 @@ Resources:
 - [Introduction to Unit Testing](https://www.guru99.com/unit-testing-guide.html)
 - [Jest - Getting Started](https://jestjs.io/docs/getting-started)
 - [Jest Tutorial: what is Jest?](https://www.valentinog.com/blog/jest/)
+
+**Day 7: DOM Manipulation (06/21/23)**
+
+Video Resources:
+
+- [An Introduction to the DOM (Document Object Model) in JavaScript (6 minute video)](https://www.youtube.com/watch?v=l-0nPnSvbX8)
+- [Traversing the DOM with JavaScript (12.5 minute video)](https://www.youtube.com/watch?v=8LWQNnVAMh4)
+- [An Introduction to DOM Events with JavaScript (31 minute youtube video)](https://www.youtube.com/watch?v=QE1YQnhntgw)
+
+Written Resources:
+- [Eloquent Javascript Chapter 13: Javascript and the Browser](http://eloquentjavascript.net/13_browser.html)
+
+- [Eloquent Javascript Chapter 14: The Document Object Model](http://eloquentjavascript.net/14_dom.html)
+
+- [Eloquent Javascript Chapter 15: Handling Events](http://eloquentjavascript.net/15_event.html)
+
+Slides:
+
+- [A Series of DOM Slides](https://www.teaching-materials.org/jsweb/slides/dom#/)
+
+- [DOM lecture slides](https://docs.google.com/presentation/d/1MWE-AoSTGIQsk1-4UkLwlWwy-ns6VSbECK3fLIEL8LQ/edit?usp=sharing)
+
+- [DOM Manipulation Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/02_DOM_Manipulation/assets/export/index.html)
+
+- [DOM Events Slides](https://raw.githack.com/learn-co-curriculum/SENG-LIVE-013023-Phase-1-JS/main/03_DOM_Events/assets/export/index.html)
+
+**Day 8: Intro to React (06/22/23)**
+
+Suggested Pre-reading:
+- [React: Quick Start](https://react.dev/learn)
+- [React: Developer Tools](https://react.dev/learn/react-developer-tools)
+- [React: Describing the UI](https://react.dev/learn/describing-the-ui)
+- [React: Your First Component](https://react.dev/learn/your-first-component)
+- [React: Importing and Exporting Components](https://react.dev/learn/importing-and-exporting-components)
