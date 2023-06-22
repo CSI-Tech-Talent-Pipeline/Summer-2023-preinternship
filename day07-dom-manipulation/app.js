@@ -66,3 +66,38 @@ const jobs = [
     postDate: "6 days ago",
   },
 ];
+
+console.log(document.body);
+console.log(document.getElementById("jobs"));
+
+function createNewJob(job) {
+  const jobDiv = document.createElement("div");
+  jobDiv.className = "j-desc";
+  jobDiv.innerHTML = `
+  <img
+    class="j-desc__company-image"
+  />
+  <div class="j-desc__details">
+    <h2 class="j-desc__job-title">
+      
+    </h2>
+    <p class="j-desc__company"></p>
+    <ul class="j-desc__metadata">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  `;
+
+  const imgEl = jobDiv.querySelector("img");
+  const titleEl = jobDiv.querySelector(".j-desc__job-title");
+  const companyEl = jobDiv.querySelector(".j-desc__company");
+  const [locationEl, salaryEl, postDateEl] = jobDiv.getElementsByTagName("li");
+
+  console.log(imgEl, titleEl, companyEl, locationEl, salaryEl, postDateEl);
+
+  document.querySelector("section#jobs").appendChild(jobDiv);
+}
+
+createNewJob(jobs[3]);
