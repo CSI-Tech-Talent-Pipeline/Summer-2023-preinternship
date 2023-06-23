@@ -1,4 +1,6 @@
-export default function JobCard({ job }) {
+import { PropTypes } from "prop-types";
+
+function JobCard({ job }) {
   // pull data from argument
   const {
     image: { src, alt },
@@ -10,18 +12,33 @@ export default function JobCard({ job }) {
   } = job;
 
   return (
-    <div className="j-desc">
-      <img className="j-desc__company-image" src={src} alt={alt} />
-      <div className="j-desc__details">
-        <h2 className="j-desc__job-title">{title}</h2>
-        <p className="j-desc__company">{company}</p>
-        <ul className="j-desc__metadata">
-          <li className="j-desc__location">{location}</li>
-          <li className="j-desc__salary">{salary}</li>
-          <li className="j-desc__posting_date">{postDate}</li>
+    <div className="flex items-start gap-4 my-13">
+      <img src={src} alt={alt} />
+      <div>
+        <h2 className="text-xl font-bold relative -top-1.5">{title}</h2>
+        <p className="text-gray-400 italic mb-2">{company}</p>
+        <ul className="text-sm">
+          <li>{location}</li>
+          <li>{salary}</li>
+          <li>{postDate}</li>
         </ul>
       </div>
     </div>
   );
 }
 
+JobCard.propTypes = {
+  job: {
+    image: {
+      src: PropTypes.string,
+      alt: PropTypes.string,
+    },
+    company: PropTypes.string,
+    title: PropTypes.string,
+    salary: PropTypes.string,
+    location: PropTypes.string,
+    postDate: PropTypes.string,
+  },
+};
+
+export default JobCard;
