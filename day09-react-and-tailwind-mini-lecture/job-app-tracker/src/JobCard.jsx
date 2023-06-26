@@ -1,3 +1,5 @@
+import { PropTypes } from "prop-types"
+
 export default function JobCard({ job }) {
   // pull data from argument
   const {
@@ -24,4 +26,3 @@ export default function JobCard({ job }) {
     </div>
   );
 }
-
