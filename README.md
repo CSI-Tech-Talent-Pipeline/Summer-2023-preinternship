@@ -55,13 +55,13 @@ Daily Schedule (Subject To Change!)
 | **Day 6** - Tuesday 6/20/23   | [Using JavaScript for Algorithms & Unit Testing](./day06-algorithms-and-unit-testing-in-js/README.md) | [Solution code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/06_solution?expand=1) |
 | **Day 7** - Wednesday 6/21/23 | [DOM Manipulation](./day07-dom-manipulation/README.md)                                                                                      |      [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/commit/3646ee6b7093d45bcba7d12cafa71c02bdc2d354)      |
 | **Day 8** - Thursday 6/22/23  | [Intro to React](./day08-intro-to-react/README.md)                                                                                        |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/commit/e2a837c1784702c6a7d72c4db27d700d044577d2)                                                                                                                 |
-| **Day 9** - Friday 6/23/23    | Cover Letters & Email Communication                                                                   |                                                                                                                     |
+| **Day 9** - Friday 6/23/23    | Cover Letters & Email Communication + [React & Tailwind mini lesson](./day09-react-and-tailwind-mini-lecture/README.md)                                                             |      [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...09_solution?expand=1)         |
 
 #### Week 3
 
 | Day                            | Description                                                               | Links |
 | ------------------------------ | ------------------------------------------------------------------------- | ----- |
-| **Day 10** - Monday 6/26/23    | React - State & Events                                                    |       |
+| **Day 10** - Monday 6/26/23    | [React - State & Events](./day10-react-state-and-events/README.md)                                                    |  [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/tree/10_solution)     |
 | **Day 11** - Tuesday 6/27/23   | React - Forms & Lifting State                                             |       |
 | **Day 12** - Wednesday 6/28/23 | React - Side Effects & Data Fetching (Create & Read)                      |       |
 | **Day 13** - Thursday 6/29/23  | React Router and Client-Side Routing in a SPA                             |       |
