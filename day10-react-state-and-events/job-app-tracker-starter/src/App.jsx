@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classNames from "classnames";
 import JobCard from "./JobCard";
 import jobs from "./jobs";
 import "./App.css";
@@ -15,15 +16,23 @@ const statuses = {
 function App() {
   const [selectedStatus, setSelectedStatus] = useState(1);
 
-  const jobCards = jobs.map((job, i) => {
+  const filteredJobs = jobs.filter(job => job.status === selectedStatus)
+
+  const jobCards = filteredJobs.map((job, i) => {
     return <JobCard job={job} key={i} />;
   });
 
   const statusButtons = Object.keys(statuses).map(statusId => {
+    const buttonClass = classNames(
+      "px-4 py-2 border",
+      {
+        "bg-blue-500": selectedStatus === parseInt(statusId)
+      }
+    )
     return (
       <button
         key={statusId}
-        className={selectedStatus === parseInt(statusId) ? "bg-blue-500" : ""}
+        className={buttonClass}
         onClick={() => setSelectedStatus(parseInt(statusId))}
       >
         {statuses[statusId]}

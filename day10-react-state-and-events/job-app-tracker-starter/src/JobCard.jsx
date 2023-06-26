@@ -12,7 +12,7 @@ function JobCard({ job }) {
   } = job;
 
   return (
-    <div className="flex items-start gap-4 my-13">
+    <div data-testid="job-card" className="flex items-start gap-4 my-13">
       <img src={src} alt={alt} />
       <div>
         <h2 className="text-xl font-bold relative -top-1.5">{title}</h2>
