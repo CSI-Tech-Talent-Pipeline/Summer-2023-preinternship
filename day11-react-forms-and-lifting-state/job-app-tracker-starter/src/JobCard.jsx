@@ -7,7 +7,8 @@ function JobCard({ job }) {
     image: { src, alt },
     company,
     title,
-    salary,
+    minSalary,
+    maxSalary,
     location,
     postDate,
   } = job;
@@ -20,7 +21,7 @@ function JobCard({ job }) {
         <p className="text-gray-400 italic mb-2">{company}</p>
         <ul className="text-sm">
           <li>{location}</li>
-          <li>{salary}</li>
+          <li>{`$${minSalary} - $${maxSalary}`}</li>
           <li>{postDate}</li>
         </ul>
       </div>
@@ -36,12 +37,11 @@ JobCard.propTypes = {
     }),
     company: PropTypes.string,
     title: PropTypes.string,
-    salary: PropTypes.string,
+    minSalary: PropTypes.number,
+    maxSalary: PropTypes.number,
     location: PropTypes.string,
     postDate: PropTypes.string,
   }),
 };
-
-console.log(typeof PropTypes.string)
 
 export default JobCard;
