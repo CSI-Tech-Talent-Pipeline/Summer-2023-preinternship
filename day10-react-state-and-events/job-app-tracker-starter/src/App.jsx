@@ -16,6 +16,8 @@ function App() {
 
   const [selectedStatus, setSelectedStatus] = useState(1)
   
+  const filteredJobs = jobs.filter(job => job.status === selectedStatus )
+  
   const jobCards = jobs.map((job, i) => {
     return <JobCard job={job} key={i} />;
   });
