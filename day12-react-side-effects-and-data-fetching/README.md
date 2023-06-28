@@ -163,5 +163,5 @@ const handleAddJobFormSubmit = async (e) => {
 - [MDN Web Docs: Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [MDN Web Docs: async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [MDN Web Docs: Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [React Docs: useEffect](https://reactjs.org/docs/hooks-effect.html)
+- [React Docs: Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects)
 - [json-server](https://github.com/typicode/json-server)
