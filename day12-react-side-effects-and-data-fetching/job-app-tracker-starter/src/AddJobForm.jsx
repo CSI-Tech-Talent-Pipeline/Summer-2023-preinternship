@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const initialJobFormState = {
-  title: "",
-  company: "",
-  location: "",
-  minSalary: 0,
-  maxSalary: 0,
-  postDate: "",
-  jobPostURL: "",
+  title: "Frontend Software Engineer, Creator",
+  company: "Tiktok",
+  location: "San Jose, CA",
+  minSalary: 136800,
+  maxSalary: 205000,
+  postDate: "2023-06-23",
+  jobPostURL: "https://www.linkedin.com/jobs/view/3556300864",
 };
 
 function AddJobForm({ onAddJob }) {
@@ -22,18 +22,30 @@ function AddJobForm({ onAddJob }) {
     });
   };
 
-  const handleAddJobFormSubmit = (e) => {
+  const handleAddJobFormSubmit = async (e) => {
     e.preventDefault();
     // modal should close
     // form should clear
     setJobFormState(initialJobFormState);
     // new job should be added to the DOM
-    onAddJob({
+    const preparedJob = {
       ...jobFormState,
       minSalary: parseInt(jobFormState.minSalary),
       maxSalary: parseInt(jobFormState.maxSalary),
       status: 1,
+    };
+    // send request to save job to db and get response
+    const response = await fetch("http://localhost:3000/jobs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(preparedJob),
     });
+    console.log('response', response);
+    const savedJob = await response.json();
+    console.log('savedJob', savedJob);
+    onAddJob(savedJob);
   };
 
   return (
