@@ -63,7 +63,7 @@ Daily Schedule (Subject To Change!)
 | ------------------------------ | ------------------------------------------------------------------------- | ----- |
 | **Day 10** - Monday 6/26/23    | [React - State & Events](./day10-react-state-and-events/README.md)                                                    |  [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/tree/10_solution)     |
 | **Day 11** - Tuesday 6/27/23   | [React - Forms & Lifting State](./day11-react-forms-and-lifting-state/README.md)                                             |   [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...11_solution)    |
-| **Day 12** - Wednesday 6/28/23 | [React - Side Effects & Data Fetching (Create & Read)](./day12-react-side-effects-and-data-fetching/README.md)                      |       |
+| **Day 12** - Wednesday 6/28/23 | [React - Side Effects & Data Fetching (Create & Read)](./day12-react-side-effects-and-data-fetching/README.md)                      |   [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/12_solution?expand=1)    |
 | **Day 13** - Thursday 6/29/23  | React Router and Client-Side Routing in a SPA                             |       |
 | **Day 14** - Friday 6/30/23    | Introduction to Technical Interviewing/Cyclic Sort/ Fast \_ Slow Pointers |       |
 
