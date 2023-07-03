@@ -7,10 +7,14 @@ import Root from "./routes/root";
 import ErrorPage from "./ErrorPage";
 import Job, {
   loader as jobDetailLoader,
-  action as notesAction
+  action as notesAction,
 } from "./routes/job";
 import JobList, { loader as jobLoader } from "./JobList";
-import AddJobForm, { action as addJobAction} from "./AddJobForm.jsx";
+import AddJobForm, { action as addJobAction } from "./AddJobForm.jsx";
+import EditJob, {
+  loader as editJobLoader,
+  action as editJobAction,
+} from "./routes/editJob.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +23,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
+        index: true,
         element: <JobList />,
         loader: jobLoader,
       },
@@ -36,9 +40,14 @@ const router = createBrowserRouter([
       {
         path: "jobs/:jobId",
         element: <Job />,
-        errorElement: <ErrorPage />,
         loader: jobDetailLoader,
         action: notesAction,
+      },
+      {
+        path: "jobs/:jobId/edit",
+        element: <EditJob />,
+        loader: editJobLoader,
+        action: editJobAction,
       },
     ],
   },
@@ -49,5 +58,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-

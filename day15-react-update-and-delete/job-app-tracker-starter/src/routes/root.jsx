@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import { AiFillHome } from "react-icons/ai";
 
 function Root() {
   return (
@@ -6,6 +7,7 @@ function Root() {
       <nav className="bg-blue-900 h-14 flex justify-items-center">
         <h2 className="flex items-center">
           <Link className="text-2xl flex items-center gap-1 px-2" to="/">
+            <AiFillHome />
             Job Application Tracker
           </Link>
         </h2>

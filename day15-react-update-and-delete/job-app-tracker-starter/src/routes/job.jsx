@@ -1,5 +1,7 @@
 import { Form, useLoaderData, Link } from "react-router-dom";
 import { statusTextById, formatTime } from "../utils";
+import { RiSave3Fill } from "react-icons/ri";
+import { FaPen } from "react-icons/fa";
 
 export async function loader({ params }) {
   const jobResponse = await fetch(`http://localhost:3000/jobs/${params.jobId}`);
@@ -66,6 +68,13 @@ function Job() {
       <p>{location}</p>
       <p>{`$${minSalary} - $${maxSalary}`}</p>
       <p>Job posted on: {postDate}</p>
+      <div className="flex my-2">
+        <Link
+          className="flex items-center gap-2 bg-blue-400 p-2 rounded-sm"
+          to={`/jobs/${id}/edit`}>
+          <FaPen /> Edit
+        </Link>
+      </div>
       <div className="overflow-auto">
         <table className="mt-4 stripe hover table-auto border-slate-700 text-center overflow-scroll w-full">
           <thead>
@@ -94,7 +103,7 @@ function Job() {
           name="content"
         />
         <button className="bg-blue-500 px-3 text-2xl rounded-sm" type="submit">
-          +
+          <RiSave3Fill />
         </button>
       </Form>
       <div>{renderedNotes}</div>
