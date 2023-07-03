@@ -1,7 +1,7 @@
 import { Form, useLoaderData, Link } from "react-router-dom";
 import { statusTextById, formatTime } from "../utils";
 import { RiSave3Fill } from "react-icons/ri";
-import { FaPen } from "react-icons/fa";
+import { FaPen, FaTrash } from "react-icons/fa";
 
 export async function loader({ params }) {
   const jobResponse = await fetch(`http://localhost:3000/jobs/${params.jobId}`);
@@ -15,6 +15,24 @@ export async function loader({ params }) {
 
 export async function action({ request, params }) {
   const formData = await request.formData();
+  if (formData.get("action") === "destroyNote") {
+    return destroyNote({ formData, request, params})
+  }
+  else if (formData.get("action") === "createNote") {
+    return createNote({ formData, request, params })
+  }
+  throw new Error("Action not supported")
+}
+
+async function destroyNote({ formData, request, params }) {
+  const noteId = formData.get("noteId");
+  const response = await fetch(`http://localhost:3000/notes/${noteId}`, {
+    method: "DELETE",
+  });
+  return null;
+}
+
+async function createNote({ formData, request, params }) {
   const preparedNote = {
     ...Object.fromEntries(formData),
     timestamp: new Date(),
@@ -28,8 +46,9 @@ export async function action({ request, params }) {
     body: JSON.stringify(preparedNote),
   });
   const note = await response.json();
-  return { note };
+  return null
 }
+
 
 function Job() {
   const { job, notes } = useLoaderData();
@@ -51,8 +70,22 @@ function Job() {
     return (
       <div className="relative p-4 pb-10 bg-slate-700 text-slate-50 rounded-md my-2">
         {note.content}
-        <div className="absolute bottom-0 left-0 pb-2 pl-4">
+        <div className="flex justify-between w-full absolute bottom-0 left-0 pb-2 px-4">
           <i className="text-slate-300">{formatTime(note.timestamp)}</i>
+          <Form
+            method="post"
+            onSubmit={(e) => { 
+              if (!confirm("Are you sure you want to delete this note?")) {
+                e.preventDefault();
+              }
+            }}
+          >
+            <input type="hidden" name="action" value="destroyNote" />
+            <input type="hidden" name="noteId" value={note.id} />
+            <button>
+              <FaTrash />
+            </button>
+          </Form>
         </div>
       </div>
     );
@@ -97,6 +130,7 @@ function Job() {
       </div>
       <h2 className="text-xl my-2">Notes</h2>
       <Form className="my-4 flex gap-2" method="post">
+        <input type="hidden" name="action" value="createNote" />
         <input
           placeholder="add a note..."
           className="flex-1 p-2"

@@ -15,6 +15,7 @@ import EditJob, {
   loader as editJobLoader,
   action as editJobAction,
 } from "./routes/editJob.jsx";
+import { action as destroyNoteAction } from "./routes/destroyNote.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         loader: editJobLoader,
         action: editJobAction,
       },
+      {
+        path: "notes/:noteId/destroy",
+        action: destroyNoteAction
+      }
     ],
   },
 ]);

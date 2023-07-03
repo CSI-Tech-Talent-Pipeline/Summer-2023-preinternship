@@ -16,7 +16,7 @@
       "applicationDate": "",
       "lastContactDate": "",
       "companyContact": "",
-      "status": 3
+      "status": 4
     },
     {
       "id": 2,
@@ -99,15 +99,16 @@
     },
     {
       "content": "new note",
-      "timestamp": "2023-07-03T14:15:47.599Z",
-      "jobId": 1,
-      "id": 3
+      "timestamp": "2023-07-03T15:48:14.099Z",
+      "jobId": 3,
+      "id": 5
     },
     {
-      "content": "it works",
-      "timestamp": "2023-07-03T14:46:14.745Z",
+      "action": "createNote",
+      "content": "here it goes",
+      "timestamp": "2023-07-03T16:17:43.144Z",
       "jobId": 1,
-      "id": 4
+      "id": 6
     }
   ]
 }
