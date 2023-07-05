@@ -13,10 +13,10 @@
       "location": "Philadelphia, PA (Remote)",
       "postDate": "2023-06-17",
       "jobPostUrl": "https://www.linkedin.com/jobs/view/3638618757",
-      "applicationDate": null,
-      "lastContactDate": null,
-      "companyContact": null,
-      "status": 1
+      "applicationDate": "",
+      "lastContactDate": "",
+      "companyContact": "",
+      "status": 4
     },
     {
       "id": 2,
@@ -96,6 +96,19 @@
       "timestamp": "2023-06-30T19:24:10.505Z",
       "jobId": 1,
       "id": 2
+    },
+    {
+      "content": "new note",
+      "timestamp": "2023-07-03T15:48:14.099Z",
+      "jobId": 3,
+      "id": 5
+    },
+    {
+      "action": "createNote",
+      "content": "here it goes",
+      "timestamp": "2023-07-03T16:17:43.144Z",
+      "jobId": 1,
+      "id": 6
     }
   ]
 }

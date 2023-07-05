@@ -1,5 +1,6 @@
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
+import { BiDetail } from "react-icons/bi";
 
 function JobCard({ job }) {
   // pull data from argument
@@ -44,6 +45,7 @@ function JobCard({ job }) {
         to={`/jobs/${id}`}
         className="flex items-center gap-2 p-5 text-xl relative -top-6"
       >
+        <BiDetail />
         Details
       </Link>
     </div>
