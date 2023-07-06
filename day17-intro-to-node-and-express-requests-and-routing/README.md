@@ -130,7 +130,7 @@ For a Recipe Tracker: '/recipes', '/ingredients' and '/recipe_ingredients'
 
 1. Understand the principles of REST (Representational State Transfer) and how it relates to API design
 2. Review the different types of HTTP requests and how they correspond to CRUD operations
-3. Implement RESTful routing for the `jobs` resource in your `server.js` file, using placeholder comments for now
+3. Implement RESTful routing for the `job_applications` resource in your `server.js` file, using placeholder comments for now
 
 Here are the RESTful routes we're going to be building for the Job app tracker.
 
