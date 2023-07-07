@@ -71,11 +71,11 @@ Daily Schedule (Subject To Change!)
 
 | Day                           | Description                                                   | Links |
 | ----------------------------- | ------------------------------------------------------------- | ----- |
-| **Day 15** - Monday 7/3/23    | React - Update & Delete                                       |       |
+| **Day 15** - Monday 7/3/23    | [React - Update & Delete](./day15-react-update-and-delete/README.md)                                       |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/15_solution?expand=1)   |
 | Tuesday 7/4/23                | 4th of July - No class                                        |       |
-| **Day 16** - Wednesday 7/5/23 | React State Management - Extracting State Logic into Reducers |       |
-| **Day 17** - Thursday 7/6/23  | Introduction to NodeJS + Express - Requests & Routing         |       |
-| **Day 18** - Friday 7/7/23    | Merge Intervals/ Reverse Linked List In Place                 |       |
+| **Day 16** - Wednesday 7/5/23 | React Project Work |  [React Inline Editing Example](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/tree/main/day16-react-router-inline-edit)     |
+| **Day 17** - Thursday 7/6/23  | [Introduction to NodeJS + Express - Requests & Routing](./day17-intro-to-node-and-express-requests-and-routing/README.md)         |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/17_solution?expand=1)   |
+| **Day 18** - Friday 7/7/23    | [Cyclic Sort & Fast and Slow Pointers Algorithms](./day18-cyclic-sort-and-fast-and-slow-pointers/README.md)                 |       |
 
 #### Week 5
 
