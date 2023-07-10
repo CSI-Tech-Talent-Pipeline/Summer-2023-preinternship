@@ -81,7 +81,7 @@ Daily Schedule (Subject To Change!)
 
 | Day                            | Description                                                       | Links |
 | ------------------------------ | ----------------------------------------------------------------- | ----- |
-| **Day 19** - Monday 7/10/23    | NodeJS + Express - PostgreSQL & Database Reads                    |       |
+| **Day 19** - Monday 7/10/23    | [NodeJS + Express - PostgreSQL & Database CRUD](./day19-node-and-express-with-postgres/README.md)                    |  [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/19_solution?expand=1)    |
 | **Day 20** - Tuesday 7/11/23   | NodeJS + Express - ORMs & Full CRUD                               |       |
 | **Day 21** - Wednesday 7/12/23 | NodeJS + Express - Database Joins & Relationship methods          |       |
 | **Day 22** - Thursday 7/13/23  | NodeJS + Express - Authentication, Authorization & Access Control |       |
