@@ -114,9 +114,15 @@ Here's how you create a PostgreSQL user:
 CREATE DATABASE job_app_tracker;
 ```
 
-3. Run `\l` to check that the `job_app_tracker` database has indeed been created.
+3. Change the owner of the database to our new user
 
-4. Close `psql` by typing `\q`.
+```
+ALTER DATABASE job_app_tracker OWNER TO dev_db_user;
+```
+
+4. Run `\l` to check that the `job_app_tracker` database has indeed been created and belongs to our new database user.
+
+5. Close `psql` by typing `\q`.
 
 Remember that the username and password you create here should match the `DB_USER` and `DB_PASSWORD` values in your `.env` file.
 
