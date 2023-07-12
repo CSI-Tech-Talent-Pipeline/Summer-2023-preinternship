@@ -264,11 +264,6 @@ Let's update our model file (`/models/user.js`) to specify the `tableName` to ad
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
     }
@@ -276,7 +271,10 @@ module.exports = (sequelize, DataTypes) => {
   User.init(
     {
       name: DataTypes.STRING,
-      email: DataTypes.STRING,
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
     },
     {
       sequelize,
@@ -293,7 +291,6 @@ module.exports = (sequelize, DataTypes) => {
 Now let's update our migration file (`/migrations/XXXXXXXXXXXXXX-create-user.js`) to adhere to the snake_case naming convention and to define the columns we want. We'll need to:
 
 - rename the table from `"Users"` to `"users"` (in both up and down!)
-- rename the `updatedAt` and `createdAt` columns to snake cased: `updatedAt` and `createdAt`
 
 ```javascript
 // migrations/XXXXXXXXXXXXXX-create-user.js
@@ -313,6 +310,7 @@ module.exports = {
       },
       email: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
@@ -356,7 +354,7 @@ Here are the steps to accomplish this:
 
 1. Update the `User` model to define the association with `JobApplication`.
 2. Update the `JobApplication` model to define the association with `User`.
-3. Generate a new migration to add the foreign key `userId` in the `job_applications` table.
+3. Generate a new migration to add the foreign key `UserId` in the `job_applications` table.
 4. Run the new migration.
 
 ### Step 1: Update the User Model
@@ -396,7 +394,7 @@ This will create a new file in the `migrations` folder. We'll then update that f
 "use strict";
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.addColumn("job_applications", "userId", {
+    await queryInterface.addColumn("job_applications", "UserId", {
       type: Sequelize.INTEGER,
       references: {
         model: "users", // you can use the table name here
@@ -407,7 +405,7 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeColumn("job_applications", "userId");
+    await queryInterface.removeColumn("job_applications", "UserId");
   },
 };
 ```
