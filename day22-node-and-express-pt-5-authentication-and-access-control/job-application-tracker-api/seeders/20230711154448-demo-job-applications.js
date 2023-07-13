@@ -12,7 +12,6 @@ module.exports = {
           email: "dakota@dakota.com",
           createdAt: new Date(),
           updatedAt: new Date(),
-          password: await bcrypt.hash("password", 10),
         },
       ],
       {}

@@ -16,7 +16,6 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -27,7 +26,6 @@ app.use(
     },
   })
 );
-
 const authenticateUser = (req, res, next) => {
   if (!req.session.userId) {
     return res
@@ -36,15 +34,6 @@ const authenticateUser = (req, res, next) => {
   }
   next();
 };
-
-// const authorizeModification = async (req, res, model, id) => {
-//   const record = await model.findOne({ where: { id: id } });
-//   if (record && record.UserId !== parseInt(req.session.userId, 10)) {
-//     return res
-//       .status(403)
-//       .json({ message: "You are not authorized to perform that action." });
-//   }
-// };
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Job App Tracker API!!!!");
@@ -59,7 +48,7 @@ app.post("/signup", async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
     });
-
+    req.session.userId = user.id; // log the user in before sending response
     res.status(201).json({
       message: "User created!",
       user: {
@@ -82,21 +71,18 @@ app.post("/signup", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   try {
-    // First, find the user by their email address
+    // find the user based on the email address in the body
     const user = await User.findOne({ where: { email: req.body.email } });
 
     if (user === null) {
-      // If the user isn't found in the database, return an 'incorrect credentials' message
       return res.status(401).json({
         message: "Incorrect credentials",
       });
     }
 
-    // If the user is found, we then use bcrypt to check if the password in the request matches the hashed password in the database
     bcrypt.compare(req.body.password, user.password, (error, result) => {
       if (result) {
-        // Passwords match
-        // TODO: Create a session for this user
+        // passwords match
         req.session.userId = user.id;
 
         res.status(200).json({
@@ -107,11 +93,14 @@ app.post("/login", async (req, res) => {
           },
         });
       } else {
-        // Passwords don't match
-        res.status(401).json({ message: "Incorrect credentials" });
+        // passwords don't match
+        return res.status(401).json({
+          message: "Incorrect credentials",
+        });
       }
     });
   } catch (error) {
+    console.error(error);
     res
       .status(500)
       .json({ message: "An error occurred during the login process" });
@@ -179,7 +168,12 @@ app.patch("/jobs/:id", authenticateUser, async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
 
   try {
-    await authorizeModification(req, res, JobApplication, jobId);
+    const record = await JobApplication.findOne({ where: { id: jobId } });
+    if (record && record.UserId !== parseInt(req.session.userId, 10)) {
+      return res
+        .status(403)
+        .json({ message: "You are not authorized to perform that action." });
+    }
     const [numberOfAffectedRows, affectedRows] = await JobApplication.update(
       req.body,
       { where: { id: jobId }, returning: true }
@@ -204,7 +198,12 @@ app.delete("/jobs/:id", authenticateUser, async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
 
   try {
-    await authorizeModification(req, res, JobApplication, jobId);
+    const record = await JobApplication.findOne({ where: { id: jobId } });
+    if (record && record.UserId !== parseInt(req.session.userId, 10)) {
+      return res
+        .status(403)
+        .json({ message: "You are not authorized to perform that action." });
+    }
     const deleteOp = await JobApplication.destroy({ where: { id: jobId } });
 
     if (deleteOp > 0) {
