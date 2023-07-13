@@ -354,7 +354,7 @@ app.post("/signup", async (req, res) => {
     });
   } catch (error) {
     if (error.name === "SequelizeValidationError") {
-      return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+      return res.status(422).json({ errors: error.errors.map((e) => e.message) });
     }
     res.status(500).json({
       message: "Error occurred while creating user",
@@ -680,20 +680,22 @@ To test this middleware, you can make requests to the protected route in Postman
 
 ## Ensuring users can only Update and Delete their own Records
 
-Finally, we should ensure that users can only update and delete their own job applications. Let's define a helper function called `authorizeModification` which will take the `model`, `id`, and current `userId` as parameters and determine if the user created the record. If so, it will return `true`, if not it will return `null`.
+Finally, we should ensure that users can only update and delete their own job applications. Let's:
+- add some code which will check to find the record in the database matching the `jobId` found in the url
+- and make sure that the `UserId` associated with that persisted job matches the `userId` stored in the current session.
+- If they don't match, we'll return a 403 forbidden status code with an error message saying `"You are not authorized to perform that action."` and end the request/response cycle.
+- If they do match, we won't do anything and the request handler will proceed as the user is authorized to perform the action they are attempting.
 
 ```js
-const authorizeModification = async (req, res, model, id) => {
-  const record = await model.findOne({ where: { id: id } });
-  if (record && record.UserId !== parseInt(req.session.userId, 10)) {
-    return res
-      .status(403)
-      .json({ message: "You are not authorized to perform that action." });
-  }
-};
+const record = await JobApplication.findOne({ where: { id: jobId } });
+if (record && record.UserId !== parseInt(req.session.userId, 10)) {
+  return res
+    .status(403)
+    .json({ message: "You are not authorized to perform that action." });
+}
 ```
 
-And then we can use this function within our update and delete routes.
+And then we can use this code within our update and delete routes.
 
 ```js
 // Update a specific job
@@ -701,7 +703,12 @@ app.patch("/jobs/:id", authenticateUser, async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
 
   try {
-    await authorizeModification(req, res, JobApplication, jobId);
+    const record = await JobApplication.findOne({ where: { id: jobId } });
+    if (record && record.UserId !== parseInt(req.session.userId, 10)) {
+      return res
+        .status(403)
+        .json({ message: "You are not authorized to perform that action." });
+    }
     // ...
   }
 });
@@ -711,7 +718,12 @@ app.delete("/jobs/:id", authenticateUser, async (req, res) => {
   const jobId = parseInt(req.params.id, 10);
 
   try {
-    await authorizeModification(req, res, JobApplication, jobId);
+    const record = await JobApplication.findOne({ where: { id: jobId } });
+    if (record && record.UserId !== parseInt(req.session.userId, 10)) {
+      return res
+        .status(403)
+        .json({ message: "You are not authorized to perform that action." });
+    }
     // ...
   }
 });
