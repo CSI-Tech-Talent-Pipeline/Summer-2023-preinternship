@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "eslint-plugin-jest-dom": "^5.0.1",
+    "eslint-plugin-testing-library": "^5.11.0",
+    "eslint-plugin-vitest": "^0.2.6",
+    "jsdom": "^22.1.0",
+    "vitest": "^0.32.2"
+  }
+}
