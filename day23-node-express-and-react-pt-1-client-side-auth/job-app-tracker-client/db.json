@@ -1,0 +1,79 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "company": "Aha!",
+      "title": "Ruby on Rails Engineer",
+      "minSalary": 100000,
+      "maxSalary": 160000,
+      "location": "Philadelphia, PA (Remote)",
+      "postDate": "2023-06-17",
+      "jobPostUrl": "https://www.linkedin.com/jobs/view/3638618757",
+      "applicationDate": "2023-06-30",
+      "lastContactDate": "2023-06-30",
+      "companyContact": "joe@schmoe.com",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "company": "Jobot",
+      "title": "Remote Front End Developer",
+      "minSalary": 120000,
+      "maxSalary": 200000,
+      "location": "Los Angeles, CA (Hybrid)",
+      "postDate": "2023-06-24",
+      "jobPostUrl": "https://www.linkedin.com/jobs/view/3643460386",
+      "applicationDate": null,
+      "lastContactDate": null,
+      "companyContact": null,
+      "status": 1
+    },
+    {
+      "id": 3,
+      "company": "Braintrust",
+      "title": "Software Engineer - Freelance (REMOTE)",
+      "minSalary": 50000,
+      "maxSalary": 90000,
+      "location": "New York, NY (Remote)",
+      "postDate": "2023-06-20",
+      "jobPostUrl": "https://www.linkedin.com/jobs/view/3641063402",
+      "applicationDate": null,
+      "lastContactDate": null,
+      "companyContact": null,
+      "status": 2
+    },
+    {
+      "id": 4,
+      "company": "Underdog.io",
+      "title": "Frontend Engineer",
+      "minSalary": 88000,
+      "maxSalary": 192000,
+      "location": "New York, United States (On site)",
+      "postDate": "2023-06-19",
+      "jobPostUrl": "https://www.linkedin.com/jobs/view/3639725859",
+      "applicationDate": null,
+      "lastContactDate": null,
+      "companyContact": null,
+      "status": 2
+    },
+    {
+      "title": "Frontend Engineer",
+      "company": "Tiktok",
+      "location": "Seattle, WA",
+      "minSalary": 124000,
+      "maxSalary": 192000,
+      "postDate": "2023-06-20",
+      "jobPostURL": "https://www.linkedin.com/jobs/view/3638860845",
+      "status": 1,
+      "id": 5
+    }
+  ],
+  "notes": [
+    {
+      "content": "Got a refferal",
+      "timestamp": "2023-06-30T16:33:47.862Z",
+      "jobId": 2,
+      "id": 1
+    }
+  ]
+}
