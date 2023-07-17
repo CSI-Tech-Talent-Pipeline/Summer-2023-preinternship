@@ -3,12 +3,21 @@ const app = express();
 const port = 4000;
 const session = require("express-session");
 require("dotenv").config();
+const cors = require("cors");
 const authRouter = require("./routes/auth");
 const jobsRouter = require("./routes/jobs");
 const {
   forbiddenErrorHandler,
   notFoundErrorHandler,
 } = require("./middleware/errorHandlers");
+
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5173",
+    allowHeaders: ["Content-Type", "Authorization"],
+    method: ["GET", "POST", "PATCH", "DELETE"],
+  })
+);
 
 app.use((req, res, next) => {
   console.log(`Request: ${req.method} ${req.originalUrl}`);
@@ -33,8 +42,8 @@ app.use(forbiddenErrorHandler);
 app.use(notFoundErrorHandler); 
 
 // routes
-app.use("/auth", authRouter);
-app.use("/jobs", jobsRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/jobs", jobsRouter);
 
 
 app.listen(port, () => {
