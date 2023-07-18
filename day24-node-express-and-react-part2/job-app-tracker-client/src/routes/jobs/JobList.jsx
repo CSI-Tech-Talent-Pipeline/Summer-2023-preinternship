@@ -3,7 +3,7 @@ import { statusTextById, statusIdByText } from "../../utils";
 import JobCard from "../../JobCard";
 
 export async function loader({ params }) {
-  let url = "http://localhost:3000/jobs";
+  let url = "/api/jobs";
   if (params.status) {
     url += `?status=${statusIdByText[params.status]}`;
   }

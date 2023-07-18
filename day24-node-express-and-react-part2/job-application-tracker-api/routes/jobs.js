@@ -27,15 +27,19 @@ const authorizeDelete = (session, job) => {
 const handleErrors = (err, res) => {
   console.error(err);
   if (err.name === "SequelizeValidationError") {
-    return res.status(422).json({ errors: err.errors.map((e) => e.message) });
+    return res.status(422).json({ errors: err.errors.map((e) => e.message).join(", ") });
   }
-  res.status(500).send({ message: err.message });
+  res.status(500).send({ errors: err.message });
 }
 
 // Get all the jobs
 router.get("/", authenticateUser, async (req, res) => {
   try {
-    const allJobs = await JobApplication.findAll();
+    const whereClause = {};
+    if (req.query.status) {
+      whereClause.status = req.query.status;
+    }
+    const allJobs = await req.user.getJobApplications({ where: whereClause});
 
     res.status(200).json(allJobs);
   } catch (err) {
@@ -63,7 +67,10 @@ router.get("/:id", authenticateUser, async (req, res) => {
 // Create a new job
 router.post("/", authenticateUser, async (req, res) => {
   try {
-    const newJob = await JobApplication.create(req.body);
+    const newJob = await JobApplication.create({
+      ...req.body,
+      UserId: req.session.userId,
+    });
 
     res.status(201).json(newJob);
   } catch (err) {

@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasMany(models.JobApplication);
+      this.hasMany(models.Note);
     }
   }
   User.init(
@@ -17,6 +18,12 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notEmpty: {
+            args: true,
+            msg: "Email can't be blank"
+          }
+        }
       },
       password: {
         type: DataTypes.STRING,

@@ -5,10 +5,10 @@ import { statusTextById, formatTime } from "../../utils";
 import NoteCard from "../../NoteCard";
 
 export async function loader({ params }) {
-  const jobResponse = await fetch(`http://localhost:3000/jobs/${params.jobId}`);
+  const jobResponse = await fetch(`/api/jobs/${params.jobId}`);
   const job = await jobResponse.json();
   const notesResponse = await fetch(
-    `http://localhost:3000/notes?jobId=${params.jobId}`
+    `/api/notes?jobId=${params.jobId}`
   );
   const notes = await notesResponse.json();
   return { job, notes };
@@ -18,10 +18,9 @@ export async function action({ request, params }) {
   const formData = await request.formData();
   const preparedNote = {
     ...Object.fromEntries(formData),
-    timestamp: new Date(),
-    jobId: parseInt(params.jobId),
+    JobApplicationId: parseInt(params.jobId),
   };
-  const response = await fetch("http://localhost:3000/notes", {
+  const response = await fetch("/api/notes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
