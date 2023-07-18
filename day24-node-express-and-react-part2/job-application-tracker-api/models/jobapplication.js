@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsToMany(models.Tag, {
         through: "JobApplicationTag",
       });
+      this.hasMany(models.Note);
     }
   }
   JobApplication.init(
@@ -14,10 +15,22 @@ module.exports = (sequelize, DataTypes) => {
       company: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "Company can't be blank",
+            args: true,
+          },
+        },
       },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "Job title can't be blank",
+            args: true,
+          },
+        },
       },
       minSalary: DataTypes.INTEGER,
       maxSalary: {

@@ -1,31 +1,29 @@
-import { Form, redirect, Navigate } from "react-router-dom";
+import { Form, Navigate } from "react-router-dom";
 import { useContext } from "react";
-import AuthContext from "../../contexts/AuthContext";
-
-export async function action({ request }) {
-  const formData = await request.formData();
-
-  const response = await fetch("/auth/signup", {
-    method: "POST",
-    body: JSON.stringify(formData),
-  });
-
-  if (!response.ok) {
-    // invalid submission, remain on signup page
-    return null;
-  }
-
-  return redirect("/");
-}
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Signup() {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, signup, authError } = useContext(AuthContext);
+
   if (currentUser) {
     return <Navigate to="/" />;
   }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const credentials = Object.fromEntries(formData);
+    await signup(credentials);
+  };
+
   return (
-    <Form method="post" className="selection:bg-blue-200 flex flex-col gap-2">
+    <Form
+      onSubmit={handleSubmit}
+      className="selection:bg-blue-200 flex flex-col gap-2"
+    >
       <h1 className="text-white">Signup</h1>
+
+      {authError && <div className="text-red-500">{authError}</div>}
 
       <fieldset className="flex flex-col">
         <label htmlFor="title">Name</label>

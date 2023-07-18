@@ -39,7 +39,7 @@ function NoteCard({ note }) {
     >
       {renderNote()}
       <div className="absolute bottom-0 left-0 w-full pb-2 px-4 flex justify-between">
-        <i className="text-slate-300">{formatTime(note.timestamp)}</i>
+        <i className="text-slate-300">{formatTime(note.updatedAt)}</i>
         <span className="flex items-center gap-2">
           <button
             onClick={() => {
