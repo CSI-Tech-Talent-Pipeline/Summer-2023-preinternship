@@ -50,6 +50,10 @@ module.exports = (sequelize, DataTypes) => {
       location: DataTypes.STRING,
       postDate: {
         type: DataTypes.DATE,
+        allowNull: true,
+        set(value) {
+          this.setDataValue("postDate", value === "" ? null : value);
+        },
         validate: {
           isDate: true,
           isPast(value) {
@@ -62,6 +66,10 @@ module.exports = (sequelize, DataTypes) => {
       jobPostUrl: DataTypes.STRING,
       applicationDate: {
         type: DataTypes.DATE,
+        allowNull: true,
+        set(value) {
+          this.setDataValue("applicationDate", value === "" ? null : value);
+        },
         validate: {
           isDate: true,
           isAfterPostDate(value) {
@@ -75,6 +83,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       lastContactDate: {
         type: DataTypes.DATE,
+        allowNull: true,
+        set(value) {
+          this.setDataValue("lastContactDate", value === "" ? null : value);
+        },
         validate: {
           isDate: true,
           isPast(value) {
