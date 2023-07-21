@@ -202,6 +202,39 @@ function bfsTree(root, searchValue) {
 
 Next, let's modify this function to search a graph. In a graph, we need to keep track of visited nodes to prevent cycles.
 
+### Diagram 
+
+Here's an example of an unweighted graph:
+
+```
+  A - - - - B
+ /|\       /|\
+F | C - - D | G
+ \|/       \|/
+  E - - - - H
+   \       /
+    - - - I
+```
+
+And here's a weighted version of the same graph:
+
+```
+  A - -3- - B
+ /|\       /|\
+6 | 4 - - 2 | 5
+F | C -1- D | G
+ \|/       \|/
+  E - -7- - H
+   \       /
+    - - 8 -
+     \   /
+       I
+```
+
+Each letter represents a vertex in the graph, and each line (with numbers in the weighted version) represents an edge. The numbers in the weighted version represent the weights of the edges. Keep in mind that these are undirected graphs, so an edge from `A` to `B` is the same as an edge from `B` to `A`.
+
+### Data Structures
+
 Before we can build this algorithm, we'll need an implementation of two classes: `Vertex` and `Graph`.
 
 ```javascript

@@ -2,6 +2,7 @@ class Node {
   constructor(value, children=[]) {
     this.value = value;
     this.children = children;
+    this.next = null;
   }
 }
 
@@ -15,8 +16,8 @@ class Queue {
     return !this.front;
   }
 
-  add(value) {
-    const newNode = new Node(value);
+  add(node) {
+    const newNode = node;
     if (this.isEmpty()) {
       this.front = this.back = newNode;
     } else {
@@ -29,14 +30,29 @@ class Queue {
     if (this.isEmpty()) {
       return null;
     }
-    const value = this.front.value;
+    const front = this.front;
     this.front = this.front.next;
-    return value;
+    return front;
   }
 }
 
 function bfsTree(root, searchValue) {
-  
+  const queue = new Queue();
+  queue.add(root);
+
+  while (!queue.isEmpty()) {
+    const currentNode = queue.remove();
+
+    if (currentNode.value === searchValue) {
+      return currentNode;
+    }
+
+    for (let child of currentNode.children) {
+      queue.add(child);
+    }
+  }
+
+  return null;
 }
 
 
@@ -69,7 +85,28 @@ class Graph {
 }
 
 function bfsGraph(graph, startValue, searchValue) {
-  
+  const queue = new Queue();
+  const queuedToVisit = new Set();
+  const startVertex = graph.getVertex(startValue);
+
+  queue.add(startVertex);
+  queuedToVisit.add(startVertex);
+  while (!queue.isEmpty()) {
+    const currentVertex = queue.remove();
+
+    if (currentVertex.value === searchValue) {
+      return currentVertex;
+    }
+
+    for (let neighbor of currentVertex.neighbors) {
+      // if we have not queuedToVisit the neighbor then queue it up and mark it as queuedToVisit
+      if (!queuedToVisit.has(neighbor)) {
+        queue.add(neighbor);
+        queuedToVisit.add(neighbor);
+      }
+    }
+  }
+  return null;
 }
 
 module.exports = {

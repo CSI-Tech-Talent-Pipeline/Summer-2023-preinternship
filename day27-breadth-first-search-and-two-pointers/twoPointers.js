@@ -3,14 +3,13 @@ function twoPointersSum(array, targetSum) {
   let j = array.length - 1;
 
   while (i < j) {
-    let sum = array[i] + array[j];
-
+    const sum = array[i] + array[j];
     if (sum === targetSum) {
       return [i, j];
-    } else if (sum < targetSum) {
-      i++;
-    } else {
+    } else if (sum > targetSum) {
       j--;
+    } else {
+      i++;
     }
   }
 
