@@ -67,6 +67,7 @@ let windowStart = 0;
 **Step 2:** Start a loop that goes through each element in the array from left to right (`windowEnd` is the end of the window).
 ```javascript
 for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+    const windowWidth = windowEnd - windowStart + 1;
 ```
 
 **Step 3:** Add the next element to the current window sum.
@@ -74,28 +75,42 @@ for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
 windowSum += arr[windowEnd];
 ```
 
-**Step 4:** Check if the window size is reached. If it is, then update the maximum sum, subtract the first element of the window from the window sum, and slide the window one element to the right.
+**Step 4:** Check if the window size is reached. If it is, then update the maximum sum:
+
+```js
+if (windowWidth === k) {
+    // this will only be true the first time that we have a window
+    // because our loop is incrementing the end point of the window
+    // making the windowWidth wider by 1 upon every iteration
+
+    // we need to store the sum of the first window of k elements as maxSum
+    maxSum = windowSum;
+}
+```
+
+**Step 5:** If the window size is greater than `k` then subtract the first element of the window from the window sum, and slide the starting point of the window one element to the right.
 ```javascript
-if (windowEnd >= k - 1) {
-    maxSum = Math.max(maxSum, windowSum);
+else if (windowWidth > k) {
     windowSum -= arr[windowStart];
     windowStart++;
+    maxSum = Math.max(maxSum, windowSum);
 }
 ```
 
-**Step 5:** Close the loop.
+**Step 6:** Close the loop.
 ```javascript
 }
 ```
 
-**Step 6:** Return the maximum sum.
+**Step 7:** Return the maximum sum.
 ```javascript
 return maxSum;
 ```
 
-**Step 7:** Test the function with an example.
+**Step 8:** Test the function with an example.
 ```javascript
 console.log(maxSubArrayOfSizeK([2, 1, 5, 1, 3, 2], 3)); // should print '9'
+console.log(maxSubArrayOfSizeK([5, 1, 5, 1, 3, 2], 3)); // should print '11'
 ```
 
 
