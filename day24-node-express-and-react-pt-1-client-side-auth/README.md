@@ -1,4 +1,4 @@
-# Day 23 - Node, Express and React - Adding Auth to the Client
+# Day 24 - Node, Express and React - Adding Auth to the Client
 
 ## SWBAT
 

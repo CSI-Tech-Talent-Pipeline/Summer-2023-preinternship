@@ -1,4 +1,4 @@
-# Day 24 - Node, Express and React - Part 2: Integrating Job and Note CRUD with API
+# Day 25 - Node, Express and React - Part 2: Integrating Job and Note CRUD with API
 
 ## SWBATs
 
