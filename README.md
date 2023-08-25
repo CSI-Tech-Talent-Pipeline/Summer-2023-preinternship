@@ -105,7 +105,7 @@ Daily Schedule (Subject To Change!)
 | **Day 30** - Tuesday 7/25/23   | Capstone Project - Session 3                        |       |
 | **Day 31** - Wednesday 7/26/23 | Capstone Project - Session 4                        |       |
 | **Day 32** - Thursday 7/27/23  | Capstone Project (first iteration staff takes lead) |       |
-| **Day 33** - Friday 7/28/23    | [Sliding Window & Trees Breadth First Search](./day33-sliding-window-and-depth-first-search/)         |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...33_solution)   |
+| **Day 33** - Friday 7/28/23    | [Sliding Window & Trees Depth First Search](./day33-sliding-window-and-depth-first-search/)         |    [Solution Code](https://github.com/CSI-Tech-Talent-Pipeline/Summer-2023-preinternship/compare/main...33_solution)   |
 
 #### Week 8
 
